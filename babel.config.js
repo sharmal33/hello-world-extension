@@ -1,7 +1,7 @@
 const isTest = process.env.NODE_ENV === 'test' || process.env.BABEL_ENV === 'test';
 
 module.exports = {
-  presets: ["@react-native/babel-preset"],
+  presets: ['@react-native/babel-preset'],
   plugins: [
     // Skip module-resolver under Jest so jest.config.js moduleNameMapper
     // sees `@/...` imports directly.
@@ -9,11 +9,10 @@ module.exports = {
       ? []
       : [
           [
-            "module-resolver",
-            { root: ["./src"], alias: { "^@/(.+)": String.raw`./src/\1` } },
+            'module-resolver',
+            { root: ['./src'], alias: { '^@/(.+)': String.raw`./src/\1` } },
           ],
         ]),
-    "react-native-worklets/plugin",
     ...(process.env.BABEL_ENV === 'production' || process.env.NODE_ENV === 'production'
       ? [['transform-remove-console', { exclude: ['error', 'warn'] }]]
       : []),

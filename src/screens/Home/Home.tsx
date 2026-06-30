@@ -13,9 +13,11 @@ import {
 } from '@/components';
 
 import { Platform, StyleSheet } from 'react-native';
+import { sharedStyles } from '@/components/shared/sharedStyles';
 
 import { FormikProps } from 'formik';
 import * as Yup from 'yup';
+import Route from '@/navigation/routes';
 import { useClearHeaderActions } from '@/utils/screen.effects';
 import { executeCustomFunction } from '@/extensions';
 import { useGlobalContext } from '@/context';
@@ -36,7 +38,7 @@ type ScreenProps = {
 
 const Home: React.FC<ScreenProps> = ({ route }) => {
   const formikRef = useRef<FormikProps<FormValues>>(null);
-  const { setGlobalData, globalData } = useGlobalContext();
+  const { setGlobalData } = useGlobalContext();
 
   const navigation = useNavigation();
 
@@ -45,6 +47,7 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
       name: name,
     });
     setGlobalData({ ext_helloWorld_greet: __out });
+    navigation.navigate(Route.RESULT);
   };
 
   useClearHeaderActions(navigation);
@@ -54,18 +57,18 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
       disabledSafeArea={false}
       isScrollable={true}
       backgroundImageResizeMode={'contain'}
-      name={'ASContainer-501920'}
-      testID={'025ef1be-97ac-42c4-bd6b-6c3b83f692fd'}
-      style={styles.aSContainerStyle}
-      testId={'ASContainer-501920'}
+      name={'ASContainer-459262'}
+      testID={'112886d2-9b04-432c-bc91-66ec54bac60d'}
+      style={sharedStyles.container}
+      testId={'ASContainer-459262'}
     >
       <ASForm
         enableReinitialize={true}
-        name={'ASForm-172090'}
+        name={'ASForm-659944'}
         validationSchema={Yup.object().shape({})}
         initialValues={{ name: '' }}
         innerRef={formikRef}
-        testId={'ASForm-172090'}
+        testId={'ASForm-659944'}
       >
         {(formikProps: FormikProps<FormValues>) => {
           const { values } = formikProps;
@@ -74,8 +77,8 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
               <ASText
                 labelType={'string'}
                 name={'titleText'}
-                dragStyle={styles.titleTextDragStyle}
-                style={[text.label.medium, styles.titleTextStyle]}
+                dragStyle={sharedStyles.greetingTextDrag}
+                style={[text.label.medium, sharedStyles.greetingText]}
                 accessibilityLabel={STRINGS.Home.titleText.accessibilityLabel}
                 testId={'titleText'}
               >
@@ -103,8 +106,8 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
                 ]}
                 prefixTextStyle={[text.body.medium, styles.namePrefixTextStyle]}
                 contentContainerStyle={styles.nameContentContainerStyle}
-                accessibilityLabel={STRINGS.Home.name.accessibilityLabel}
                 label={STRINGS.Home.name.label}
+                accessibilityLabel={STRINGS.Home.name.accessibilityLabel}
                 testId={'name'}
                 placeholder={STRINGS.Home.name.placeholder}
               />
@@ -130,22 +133,10 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
                 leadingIconStyles={styles.greetBtnLeadingIconStyles}
                 trailingIconStyles={styles.greetBtnTrailingIconStyles}
                 textStyle={[text.label.medium, styles.greetBtnTextStyle]}
-                accessibilityLabel={STRINGS.Home.greetBtn.accessibilityLabel}
                 label={STRINGS.Home.greetBtn.label}
+                accessibilityLabel={STRINGS.Home.greetBtn.accessibilityLabel}
                 testId={'greetBtn'}
               />
-              <ASText
-                labelType={'string'}
-                name={'greetingText'}
-                dragStyle={styles.greetingTextDragStyle}
-                style={[text.label.medium, styles.greetingTextStyle]}
-                accessibilityLabel={
-                  STRINGS.Home.greetingText.accessibilityLabel
-                }
-                testId={'greetingText'}
-              >
-                {globalData?.ext_helloWorld_greet.message}
-              </ASText>
             </>
           );
         }}
@@ -155,19 +146,6 @@ const Home: React.FC<ScreenProps> = ({ route }) => {
 };
 
 const styles = StyleSheet.create({
-  aSContainerStyle: {
-    height: '100%',
-    width: '100%',
-    backgroundColor: color.surface.default,
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-  },
-  titleTextDragStyle: { flexBasis: 'auto' },
-  titleTextStyle: {
-    overflow: 'visible',
-    textAlign: 'left',
-    ...Platform.select({ web: { whiteSpace: 'pre-wrap' }, default: {} }),
-  },
   nameLabelTextStyle: {
     maxWidth: '97%',
     paddingRight: 0,
@@ -220,12 +198,6 @@ const styles = StyleSheet.create({
   greetBtnLeadingIconStyles: { marginRight: space['1'] },
   greetBtnTrailingIconStyles: { marginLeft: space['1'] },
   greetBtnTextStyle: { color: color.brand.onPrimary },
-  greetingTextDragStyle: { flexBasis: 'auto' },
-  greetingTextStyle: {
-    overflow: 'visible',
-    textAlign: 'left',
-    ...Platform.select({ web: { whiteSpace: 'pre-wrap' }, default: {} }),
-  },
 });
 
 export default Home;

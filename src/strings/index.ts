@@ -1,23 +1,29 @@
 // AUTO-GENERATED — do not edit by hand. Re-run the generator to update.
 
 export const STRINGS = {
+  Result: {
+    resultTitle: {
+      accessibilityLabel: 'Greeting result',
+      label: 'Greeting result',
+    },
+    greetingText: {
+      accessibilityLabel: 'Greeting',
+      label: 'Greeting',
+    },
+  },
   Home: {
     titleText: {
       label: 'Hello World SDK',
       accessibilityLabel: 'Hello World SDK',
     },
     name: {
-      accessibilityLabel: 'Your name',
       label: 'Your name',
+      accessibilityLabel: 'Your name',
       placeholder: 'Enter value',
     },
     greetBtn: {
-      accessibilityLabel: 'Greet',
       label: 'Greet',
-    },
-    greetingText: {
-      accessibilityLabel: 'Greeting',
-      label: 'Greeting',
+      accessibilityLabel: 'Greet',
     },
   },
 } as const;
