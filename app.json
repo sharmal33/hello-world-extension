@@ -1,4 +1,5 @@
 {
   "name": "HelloWorldSDK",
-  "displayName": "HelloWorldSDK"
+  "displayName": "HelloWorldSDK",
+  "expo": {}
 }

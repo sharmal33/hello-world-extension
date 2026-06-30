@@ -11,6 +11,8 @@ import { color } from '@/assets';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from '@/screens/Home/Home';
+import Greeting from '@/screens/Greeting/Greeting';
+import Welcome from '@/screens/Welcome/Welcome';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +53,20 @@ const AppNavigator = (): JSX.Element => {
       <Stack.Screen
         name={Route.HOME}
         component={Home}
+        options={() => ({
+          headerStyle: { backgroundColor: color.surface.default },
+        })}
+      />
+      <Stack.Screen
+        name={Route.GREETING}
+        component={Greeting}
+        options={() => ({
+          headerStyle: { backgroundColor: color.surface.default },
+        })}
+      />
+      <Stack.Screen
+        name={Route.WELCOME}
+        component={Welcome}
         options={() => ({
           headerStyle: { backgroundColor: color.surface.default },
         })}

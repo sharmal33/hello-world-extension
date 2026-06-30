@@ -1,14 +1,90 @@
 {
   "schemaVersion": 1,
-  "appId": "ee41a917-6942-47dc-8f06-2152e656eecb",
+  "appId": "8f4ec56a-c8f2-4d65-88d9-149a7de5ebdc",
   "framework": "ReactNative",
   "version": "0.79.1",
   "buildId": "HelloWorldExtRN",
-  "generatedAt": "2026-06-30T13:29:56.422Z",
+  "generatedAt": "2026-06-30T22:10:01.001Z",
   "files": {
+    ".gitignore": {
+      "hash": "d890dd7a9f461dbe69dc78541b060db9542176b8f415ddd024003ad956257070",
+      "bytes": 412
+    },
+    "README.md": {
+      "hash": "4f0b382a4af3c5b070d72661cac8c0c3ef56f5b90ea787b3ee2523529ed14225",
+      "bytes": 10264
+    },
+    "android/app/build.gradle": {
+      "hash": "e70620b8f49f2ee5a1b042e01c080b6d1a220e5bde708c1153afe133b7477d20",
+      "bytes": 7576
+    },
+    "android/app/build.gradle.bak": {
+      "hash": "632dd39d11a80b7ed736f6beff0ff7aa7ef01aec8b64600c24d967a544d55001",
+      "bytes": 6165
+    },
+    "android/app/src/main/res/values/styles.xml": {
+      "hash": "741624f1a125e54b35536047f642ac190869b51224c8fb63082ae356d098a32f",
+      "bytes": 409
+    },
+    "android/gradle.properties": {
+      "hash": "716a0bbfcc5f135b485f4ff4afb388ec11e5ec152c14d600e550fbde9ead26d0",
+      "bytes": 2250
+    },
+    "app.json": {
+      "hash": "af24594753a97634b42f50947d33653847d494563346e7ab0d9ce861ad5ff861",
+      "bytes": 77
+    },
+    "ios/Podfile": {
+      "hash": "37e7b57064784736dc124159fab27c0602e1a310a79e3a0a48e308aa02b2ee0f",
+      "bytes": 2931
+    },
+    "src/navigation/AppNavigator.tsx": {
+      "hash": "4e1e0eb74edc29d438b2d99af3fa014556f0159f7bf7182d8bf0c52a6dfce597",
+      "bytes": 2192
+    },
+    "src/navigation/routes/index.ts": {
+      "hash": "3e888863c494fd1839345bd97f90e79472da7bd2560f6cf6c734f887c2389e10",
+      "bytes": 218
+    },
+    "src/screens/Home/Home.tsx": {
+      "hash": "cf917f76c1c4e6531f7ed1681d777b00e35622abcb01016a0bb3a0ca94b2a47b",
+      "bytes": 5849
+    },
+    "src/strings/index.ts": {
+      "hash": "80d7ecbe5555273a97cdd9782851be2d031f59e3d1a2d689a890554489f8580d",
+      "bytes": 943
+    },
+    "src/components/shared/AppButton.tsx": {
+      "hash": "b4a5a43331e595175500e162750f511827d37b4023681806ed1284b1e51a9358",
+      "bytes": 1270
+    },
+    "src/components/shared/index.ts": {
+      "hash": "e35ebbb708c52ec0880eaba9aeebf3369dace6a53a2b1508e4fb3479b759787e",
+      "bytes": 52
+    },
+    "src/components/shared/sharedStyles.ts": {
+      "hash": "37dc91277ca4d798ddfc6fb3c950ad5428c794f9d622d0c10dc3b4de7e3f2922",
+      "bytes": 1476
+    },
+    "src/navigation/routes/Greeting.ts": {
+      "hash": "1bff89c5b9e947f4d24d35829f0c77484d72a750fbb5e034348f58381145d8a4",
+      "bytes": 69
+    },
+    "src/navigation/routes/Welcome.ts": {
+      "hash": "b6c31451cb307b7caed6513ecb491cbe12410c790fe914a2b95ac7c2cf974803",
+      "bytes": 65
+    },
+    "src/screens/Greeting/Greeting.tsx": {
+      "hash": "ddca195bd1f599002f8c4ab0f3170cc5ecd4f0e3835426c68cd743d75d36f6b0",
+      "bytes": 1655
+    },
+    "src/screens/Welcome/Welcome.tsx": {
+      "hash": "22d0168c1d4d6da3bb16308bdf64bed256a3ab0ecbf7d39f990814868c6fb73c",
+      "bytes": 2210
+    },
     ".appstudio/manifest.json": {
-      "hash": "0aff0b98a555e56de3975b1bc5b519afc320616cd0f952000834b331ff0ae62e",
-      "bytes": 28728
+      "hash": "5e1cd3022d612d250bd5aadb1d254b73aadafb510ea906e518d6fa7a1572d6a4",
+      "bytes": 29026
     },
     ".env": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -26,10 +102,6 @@
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0
     },
-    ".gitignore": {
-      "hash": "e8310e6b4a9b929818e64db8efa049e21a1c3a2a7af9c8ed9d350d6e1eb7deb9",
-      "bytes": 281
-    },
     ".prettierignore": {
       "hash": "8e26728f24a91a2fe33e00bbde6a1acc351335234dbbf1a0ac0e4efdf684cff0",
       "bytes": 21
@@ -46,21 +118,9 @@
       "hash": "dbc06f89321c2d5fd7b6c6bd1a62f766e776dba7a58d79cea4c97ee593349332",
       "bytes": 2390
     },
-    "README.md": {
-      "hash": "e956c5fe8562bbaf1c6dfbaf313bc076228938515da488e60810a7519cea92b2",
-      "bytes": 1586
-    },
     "__tests__/App.test.tsx": {
       "hash": "7f3da53acc27cfc1a9b8ccd281775ec4ceb5b38ff1c6deb13864f164c071fe9a",
       "bytes": 364
-    },
-    "android/app/build.gradle": {
-      "hash": "632dd39d11a80b7ed736f6beff0ff7aa7ef01aec8b64600c24d967a544d55001",
-      "bytes": 6165
-    },
-    "android/app/build.gradle.bak": {
-      "hash": "9519cb0c2a9fcfabb491021f18f3b5c056e3307d9b5d67a4bb353964f3afa3bd",
-      "bytes": 4663
     },
     "android/app/debug.keystore": {
       "hash": "221e0a3106aa4c3ccc154e0a418b55020b3f9ea6e84f92e8749cd9e2f39f5e58",
@@ -142,10 +202,6 @@
       "hash": "4a8e7429f281b54ea973f439d75427a4b5833ce5bc32c67326114f3c72d26330",
       "bytes": 23
     },
-    "android/app/src/main/res/values/styles.xml": {
-      "hash": "ffab4ed27a8e7936f41353fb5a739ba7920117f103df36e82226e187cea0f7b7",
-      "bytes": 415
-    },
     "android/build.gradle": {
       "hash": "6f11471bc13cc9e210c4e92c3949bcc471c1abd39b87dbd1efbe87e9af4632a9",
       "bytes": 547
@@ -153,10 +209,6 @@
     "android/build.gradle.bak": {
       "hash": "6f11471bc13cc9e210c4e92c3949bcc471c1abd39b87dbd1efbe87e9af4632a9",
       "bytes": 547
-    },
-    "android/gradle.properties": {
-      "hash": "c00e5fea7dfedc9ee16c91e01bde489ff7a3f88c149cc8fd51cc109f015bafc7",
-      "bytes": 1993
     },
     "android/gradle/wrapper/gradle-wrapper.jar": {
       "hash": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f",
@@ -177,10 +229,6 @@
     "android/settings.gradle": {
       "hash": "7f0ecd9e92052562eb3c76dca526226caddf5f395157cca1324b3820022e210c",
       "bytes": 344
-    },
-    "app.json": {
-      "hash": "25b35474956d17cb55c69c3ad9c684560b50688e1dc35ff3665a81d9d2cf2d8a",
-      "bytes": 64
     },
     "babel.config.js": {
       "hash": "0cd582e0028e54b5beef86b369bfe37940460d7ccd4809c00ac797ba8530021c",
@@ -273,10 +321,6 @@
     "ios/HelloWorldSDK/PrivacyInfo.xcprivacy": {
       "hash": "b9289ecfec677540a293fba948db7268c02b1d44943fa66b1e7a85ba0c31a252",
       "bytes": 986
-    },
-    "ios/Podfile": {
-      "hash": "a77e5583a628807c3d65c71dade73cd1257c19ba4ad75937b31bfaa47cd49641",
-      "bytes": 1986
     },
     "jest.config.js": {
       "hash": "ff34c1c382123874acdb6a54d01ba979ce59363a398abef6e4c471857cfadadc",
@@ -674,10 +718,6 @@
       "hash": "33feabaf1cf915c8f951fdef9f29ac4926e2ff75c07b5b99dc96b66cc2ec8605",
       "bytes": 878
     },
-    "src/navigation/AppNavigator.tsx": {
-      "hash": "0730c6c403e1686e438cbc6416d14a099c5af47cb33d13ab7069ac7665a25d6f",
-      "bytes": 1707
-    },
     "src/navigation/NavigationService.tsx": {
       "hash": "c1264779e0e7a0db7846eed251e1f0a39515edb812a3ecb34c20614bfd52a4cd",
       "bytes": 547
@@ -690,17 +730,9 @@
       "hash": "073036ac52c8c4df645952b1121fcb09f3be8349b5a2895dc9fa8503ca37d3bb",
       "bytes": 163
     },
-    "src/navigation/routes/index.ts": {
-      "hash": "2caf2f41343b5213eba445b602a2b9274a394b6123c08cd820420b38bfcd2613",
-      "bytes": 117
-    },
     "src/providers/AppProviders.tsx": {
       "hash": "fccbb99407dab52c2f1acbc949e10a5c7652ad7c54e7fcb983c08c3d9e505fa1",
       "bytes": 881
-    },
-    "src/screens/Home/Home.tsx": {
-      "hash": "2417f5bc4bd23a99c1c9eff5170ca7566842e0ceab854edf47e347a8d4789233",
-      "bytes": 7434
     },
     "src/services/api-clients/AuthApiClient.tsx": {
       "hash": "259a95a1ac6c99465e3bed8228d3bbf3737bfe03b9a422e209ffc830a0a21374",
@@ -721,10 +753,6 @@
     "src/services/serviceUtils.ts": {
       "hash": "611575fc2c7e476703c97e4303b7222c1b35a87229943fea92d1dac8f4b9cdde",
       "bytes": 1851
-    },
-    "src/strings/index.ts": {
-      "hash": "ced761700e5b465e1d4fb2bca205bda0c5cc9f090f9f085b282be61514471cac",
-      "bytes": 489
     },
     "src/utils/as.jsonata.functions.ts": {
       "hash": "1b9c9e2b10feea3ffa91d319122526bd3f45fb7d632efb3971795344e13457e4",
